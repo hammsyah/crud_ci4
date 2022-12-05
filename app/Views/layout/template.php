@@ -1,54 +1,195 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="<?= base_url(); ?>/image/favicon.ico" type="image/ico" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title><?= $title; ?> | Simpeg Rajekwesi </title>
 
-    <title><?= $title; ?></title>
+    <!-- Bootstrap ok -->
+    <link href="<?= base_url('/aset'); ?>/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome ok -->
+    <link href="<?= base_url('/aset'); ?>/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress ok -->
+    <link href="<?= base_url('/aset'); ?>/css/nprogress.css" rel="stylesheet">
+    <!-- iCheck ok -->
+    <link href="<?= base_url('/aset'); ?>/css/green.css" rel="stylesheet">
+
+    <!-- bootstrap-progressbar ok -->
+    <link href="<?= base_url('/aset'); ?>/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap ok -->
+    <link href="<?= base_url('/aset'); ?>/css/jqvmap.min.css" rel="stylesheet" />
+    <!-- bootstrap-daterangepicker -->
+    <link href="<?= base_url('/aset'); ?>/css/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="<?= base_url('/aset'); ?>/css/custom.min.css" rel="stylesheet">
+
+
 </head>
 
-<body>
-    <!-- navbar -->
-    <div class="container">
-        <!-- bikin kelas kontainer supaya navbar ditengah -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">HAMMSYAH</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" href="<?= base_url('/'); ?>">Home</a>
-                    <a class="nav-link" href="<?= base_url('/pages/about'); ?>">About</a>
-                    <a class="nav-link" href="<?= base_url('/pages/kontak'); ?>">kontak</a>
-                    <a class="nav-link" href="<?= base_url('/komik/index'); ?>">komik</a>
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="profile_pic">
+                            <img src="<?= base_url(); ?>/image/pp/img.jpg" alt="..." class="img-circle profile_img">
+                        </div>
+                        <div class="profile_info">
+                            <span>Welcome,</span>
+                            <h2>John Doe</h2>
+                        </div>
+                    </div>
+                    <!-- /menu profile quick info -->
+
+                    <br />
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <h3>General</h3>
+                            <ul class="nav side-menu">
+                                <li><a href="<?= base_url('/pages/index'); ?>"> <i class="fa fa-home"></i> Home </a>
+                                </li>
+
+                                <li><a href="<?= base_url('/pages/about'); ?>"> <i class="fa fa-edit"></i> About </a>
+                                </li>
+
+                                <li><a href="<?= base_url('/pages/kontak'); ?>"> <i class="fa fa-group"></i> kontak </a>
+                                </li>
+
+                                <li><a href="<?= base_url('/komik/index'); ?>"> <i class="fa fa-book"></i> Komik </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+
+                    </div>
+                    <!-- /sidebar menu -->
+
+                    <!-- /menu footer buttons -->
+                    <div class="sidebar-footer hidden-small">
+                        <a data-toggle="tooltip" data-placement="top" title="Settings">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                            <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Lock">
+                            <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <!-- /menu footer buttons -->
                 </div>
             </div>
-        </nav>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <nav class="nav navbar-nav">
+                        <ul class=" navbar-right">
+                            <li class="nav-item dropdown open" style="padding-left: 15px;">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="<?= base_url(); ?>/image/pp/img.jpg" alt="">John Doe
+                                </a>
+                                <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="javascript:;"> Profile</a>
+                                    <a class="dropdown-item" href="javascript:;">
+                                        <span class="badge bg-red pull-right">50%</span>
+                                        <span>Settings</span>
+                                    </a>
+                                    <a class="dropdown-item" href="javascript:;">Help</a>
+                                    <a class="dropdown-item" href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+
+                <?= $this->renderSection('isikonten'); ?>
+
+            </div>
+            <!-- /page content -->
+
+            <!-- footer content -->
+            <footer>
+                <div class="pull-right">
+                    Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+        </div>
     </div>
 
+    <!-- jQuery ok -->
+    <script src="<?= base_url('/aset'); ?>/js/jquery.min.js"></script>
+    <!-- Bootstrap ok -->
+    <script src="<?= base_url('/aset'); ?>/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick ok -->
+    <script src="<?= base_url('/aset'); ?>/js/fastclick.js"></script>
+    <!-- NProgress ok -->
+    <script src="<?= base_url('/aset'); ?>/js/nprogress.js"></script>
+    <!-- Chart.js ok -->
+    <script src="<?= base_url('/aset'); ?>/js/Chart.min.js"></script>
+    <!-- gauge.js ok -->
+    <script src="<?= base_url('/aset'); ?>/js/gauge.min.js"></script>
+    <!-- bootstrap-progressbar ok -->
+    <script src="<?= base_url('/aset'); ?>/js/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck ok -->
+    <script src="<?= base_url('/aset'); ?>/js/icheck.min.js"></script>
+    <!-- Skycons ok -->
+    <script src="<?= base_url('/aset'); ?>/js/skycons.js"></script>
+    <!-- Flot ok -->
+    <script src="<?= base_url('/aset'); ?>/js/jquery.flot.js"></script>
+    <script src="<?= base_url('/aset'); ?>/js/jquery.flot.pie.js"></script>
+    <script src="<?= base_url('/aset'); ?>/js/jquery.flot.time.js"></script>
+    <script src="<?= base_url('/aset'); ?>/js/jquery.flot.stack.js"></script>
+    <script src="<?= base_url('/aset'); ?>/js/jquery.flot.resize.js"></script>
+    <!-- Flot plugins ok -->
+    <script src="<?= base_url('/aset'); ?>/js/jquery.flot.orderBars.js"></script>
+    <script src="<?= base_url('/aset'); ?>/js/jquery.flot.spline.min.js"></script>
+    <script src="<?= base_url('/aset'); ?>/js/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="<?= base_url('/aset'); ?>/js/date.js"></script>
+    <!-- JQVMap ok -->
+    <script src="<?= base_url('/aset'); ?>/js/jquery.vmap.js"></script>
+    <script src="<?= base_url('/aset'); ?>/js/jquery.vmap.world.js"></script>
+    <script src="<?= base_url('/aset'); ?>/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker ok -->
+    <script src="<?= base_url('/aset'); ?>/js/moment.min.js"></script>
+    <script src="<?= base_url('/aset'); ?>/js/daterangepicker.js"></script>
 
-    <?= $this->renderSection('isikonten'); ?>
-    <!-- ini untuk meletakkan konten -->
+    <!-- Custom Theme Scripts ok -->
+    <script src="<?= base_url('/aset'); ?>/js/custom.min.js"></script>
 
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-    -->
 </body>
 
 </html>
