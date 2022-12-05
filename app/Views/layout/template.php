@@ -14,7 +14,7 @@
     <!-- Bootstrap ok -->
     <link href="<?= base_url('/aset'); ?>/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome ok -->
-    <link href="<?= base_url('/aset'); ?>/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?= base_url('/aset'); ?>/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress ok -->
     <link href="<?= base_url('/aset'); ?>/css/nprogress.css" rel="stylesheet">
     <!-- iCheck ok -->
